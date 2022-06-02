@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+body, html {
+    margin: 0;
+    height: 100vh;
+    width: 1440px;
+}
+body {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    background: hsl(217, 54%, 11%);
+    font-family: 'Outfit', sans-serif;
+    letter-spacing: .02em;
+}
+
+
+.card {
+    padding: 0 10em;
+    color: white;
+    font-size: 18px;
+    position: relative;
+
+    &__content {
+        padding: 1.5em;
+        background: hsl(216, 50%, 16%);
+        border-radius: 20px;
+        width: 320px;
+        }
+
+    .container {
+        display:block;
+        justify-content: center;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+        opacity: 1;
+    }
+
+    &__img--overlay{
+        position:absolute;
+        height: 12%;
+        width: 12%;
+        top: 44%;
+        left: 44%;
+        transform: translate (-44%, -44%);
+        -ms-transform: translate(-44%, -44%);
+        opacity: 0;
+    }
+
+    .container:hover {
+        background: hsl(178, 100%, 50%);
+    }
+
+    .container:hover &__img--overlay{
+        z-index: 10;
+        opacity: 1;
+    }
+
+    &__img {
+        display: block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+        justify-content: center;
+        opacity: 1;
+        transition: .5 ease;
+        }
+
+     &__img:hover {
+        opacity: 0.5;
+        z-index: 70;
+    }
+
+    &__title {
+        color: white;
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    &__title:hover {
+        color: hsl(178, 100%, 50%);
+    }
+
+   &__desc {
+       font-weight: 400;
+       color: hsl(215, 51%, 70%);
+       margin: 0 ;
+       line-height: 1.5em;
+   }
+
+    &__detail {
+        display:flex;
+        flex-direction: row;
+        list-style-type: none;
+        font-size: 18px;
+        border-bottom: 0.2px solid hsla(215, 52%, 70%, 0.401);
+        width: 100%;
+        height: 60px;
+        align-items: center;
+        align-content: stretch;
+        padding: .5em 0;
+
+        img {
+            float: left;
+            height: 10%;
+            align-self: center;
+        }
+
+        &__img{
+            float: left;
+            margin-right: 6px;
+        }
+
+        &__amount {
+            display: inherit;
+            color: hsl(178, 100%, 50%);
+            width: 40%;
+            text-align:left;
+            align-self: center;
+            justify-content: flex-start;
+            margin-right: 70px;
+            font-weight: 400;
+        }
+
+        &__days {
+            display: inherit;
+            color:hsl(215, 51%, 70%);
+            width: 40%;
+            text-align:left;
+            justify-content: flex-end;
+        }
+    }
+
+    &__creator {
+        display: flex;
+        color:hsl(215, 51%, 70%);
+        margin-top: .6em;
+        font-size: 18px;
+
+        img {
+            border: 1px solid white;
+            border-radius: 50%;
+        }
+
+        &__desc {
+            float: right;
+
+            span {
+                color: white;
+            }
+            span:hover {
+                color: hsl(178, 100%, 50%);
+            }
+        }
+
+        &__img {
+            float: left;
+            align-self: center;
+            margin-right: 1.1em;
+            border-radius: 50%;
+            width: 9%;
+            height: 9%;
+        }
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: white;
+    margin-top: 3em;
+  
+}
+    
+.attribution a {
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+    padding:.1em;
+}
+
+@media only screen and (max-width: 375px){
+
+    .card {
+        
+        &__desc{
+            font-weight: 300;
+        }
+
+        &__detail{
+            font-weight: 300;
+        }
+
+        &__creator {
+            font-weight: 300;
+        }
+    }
+}
+
