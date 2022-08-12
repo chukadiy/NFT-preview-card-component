@@ -40,8 +40,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [(https://github.com/chukadiy/Testimonials-grid-section)]
-- Live site URL: [(https://chukadiy.github.io/Testimonials-grid-section/)]
+- Solution URL: [(https://github.com/chukadiy/NFT-preview-card-component)]
+- Live site URL: [(https://chukadiy.github.io/NFT-preview-card-component/)]
 
 ## My Process
 
